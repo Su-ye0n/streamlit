@@ -14,7 +14,7 @@ FORMAT_EN = {"영화": "FILM", "드라마": "SERIES", "다큐": "DOCUMENTARY", "
 FORMAT_SHORT = {"영화": "FILM", "드라마": "SERIES", "다큐": "DOCU", "애니": "ANIME"}
 LEVEL_EN = ["the beginner", "the explorer", "the master"]
 
-st.set_page_config(page_title="moneyvie — money + movie", page_icon="🎞️", layout="centered")
+st.set_page_config(page_title="moneyvie | 금융 레벨로 고르는 영화·드라마", page_icon="🎞️", layout="centered")
 st.markdown(f"<style>{(Path(__file__).parent / 'style.css').read_text(encoding='utf-8')}</style>",
             unsafe_allow_html=True)
 
