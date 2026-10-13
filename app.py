@@ -135,6 +135,7 @@ def reel_svg():
 
 
 def start_view():
+    # 1) 타이틀
     html(
         "<div class='marquee'><span>a test by moneyvie</span>"
         f"{reel_svg()}<span>original motion picture — 2026</span></div>"
@@ -144,22 +145,26 @@ def start_view():
         "<span class='spark'>✦</span></div>"
         "<div class='tl l2'><span class='sw'>V</span><span class='px'>IE</span>"
         "<span class='spark small'>✦</span></div>"
-        "<div class='coord-l'>SEOUL, KOREA</div>"
         "</div>"
-        "<div class='spaced'>isn't every film about money<br>a story worth a closer look?</div>"
-        f"{mosaic()}"
-        "<div class='kr-quote'>✱ 돈을 아는 만큼, 영화는 다르게 보인다.</div>"
-        "<hr class='rule'>"
+        # 2) 소개
         "<div class='kr-title'>나의 금융 레벨로 고르는<br>인생 영화 · 드라마</div>"
         f"<div class='kr-sub'>예금부터 투자, 신용, 경제사까지 {N_QUESTIONS}개의 장면.<br>"
         "당신의 레벨에 맞는 상영작을 골라 드립니다.</div>")
+    # 3) 모자이크 섹션
+    html(
+        "<hr class='rule' style='margin-top:22px'>"
+        "<div class='coords' style='margin-bottom:12px'>SEOUL, KOREA</div>"
+        "<div class='spaced'>isn't every film about money<br>a story worth a closer look?</div>"
+        f"{mosaic()}"
+        "<div class='kr-quote'>✱ 돈을 아는 만큼, 영화는 다르게 보인다.</div>")
+    # 4) 시작 버튼 (맨 아래) + 크레딧
     st.write("")
     st.button("▶  상영 시작", on_click=start, type="primary", width="stretch")
     html(credits([
-        ["moneyvie <b>presents</b>", f"{N_QUESTIONS} scenes", "8 genres of money"],
-        [f"featuring <b>{len(WORKS)} films & series</b> from 6 countries"],
-        ["written by <b>your answers</b>", "directed by <b>you</b>"],
-    ]) + "<div class='fineprint'>※ 재미와 학습을 위한 테스트이며 투자 권유가 아닙니다.</div>")
+            ["moneyvie <b>presents</b>", f"{N_QUESTIONS} scenes", "8 genres of money"],
+            [f"featuring <b>{len(WORKS)} films & series</b> from 6 countries"],
+            ["written by <b>your answers</b>", "directed by <b>you</b>"],
+        ]) + "<div class='fineprint'>※ 재미와 학습을 위한 테스트이며 투자 권유가 아닙니다.</div>")
 
 
 # ── 화면: 공유 링크로 들어온 경우 ─────────────────
