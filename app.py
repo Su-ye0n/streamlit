@@ -7,7 +7,7 @@ from data import LEVELS, get_level, pick_questions
 from works import COUNTRY_FLAG, FORMAT_ICON, WORKS, recommend
 
 # 배포 후 받은 주소로 바꾸세요 (공유 링크에 쓰임)
-APP_URL = "https://your-app-name.streamlit.app"
+APP_URL = "https://money-vie.streamlit.app/"
 N_QUESTIONS = 10
 TYPE_LABEL = {"choice": "객관식", "ox": "OX", "calc": "계산", "situation": "상황"}
 FORMAT_EN = {"영화": "FILM", "드라마": "SERIES", "다큐": "DOCUMENTARY", "애니": "ANIMATION"}
@@ -156,7 +156,7 @@ def start_view():
         "<div class='coords' style='margin-bottom:12px'>SEOUL, KOREA</div>"
         "<div class='spaced'>isn't every film about money<br>a story worth a closer look?</div>"
         f"{mosaic()}"
-        "<div class='kr-quote'>✱ 돈을 아는 만큼, 영화는 다르게 보인다.</div>")
+        "<div class='kr-quote'>✱ 돈을 아는 만큼, 영화는 다르게 보입니다.</div>")
     # 4) 시작 버튼 (맨 아래) + 크레딧
     st.write("")
     st.button("▶  상영 시작", on_click=start, type="primary", width="stretch")
